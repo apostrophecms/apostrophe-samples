@@ -1,0 +1,63 @@
+{# Automatically extends the right outer layout and also handles AJAX siutations #}
+{% extends data.outerLayout %}
+
+{% block title %}
+  {# Create a useful, SEO-friendly title tag based on what we have #}
+  {% if data.piece %}
+    {{ data.piece.title }}
+  {% elseif data.page %}
+    {{ data.page.title }}
+  {% else %}
+    {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
+  {% endif %}
+{% endblock %}
+
+{% block extraHead %}
+  {#
+    This block outputs its contents in the HTML document's <head>.
+    It is a good place to put extra <script> <link> and <meta> tags.
+  #}
+{% endblock %}
+
+{% block beforeMain %}
+  <header>
+    <h1>AmazingCo: {{ data.page.title }}</h1>
+    <ul class="tabs">
+      {% for tab in data.home._children %}
+        <li class="tab {{ 'active' if tab.slug == data.page.slug }}">
+          {{ apos.log(tab.thumbnail) }}
+          {% set image = apos.images.first(tab.thumbnail) %}
+          {% if image %}
+            <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
+          {% else %}
+            <span class="missing-thumbnail"></span>
+          {% endif %} 
+          <a href="{{ tab._url }}">{{ tab.title }}</a>
+        </li>
+      {% endfor %} 
+    </ul>
+    {% macro breadcrumb(page) %}
+      <li class="breadcrumb"><a href="{{ page._url }}">{{ page.title }}</a></li>
+    {% endmacro %}
+    <ul class="breadcrumbs">
+      {% for ancestor in data.page._ancestors %}
+        {{ breadcrumb(ancestor) }}
+        {{ breadcrumb(data.page) }}
+      {% endfor %}
+    </ul>
+  </header>
+{% endblock %}
+
+{% block main %}
+  {#
+    Usually, your page templates in the apostrophe-pages module will override
+    this block. It is safe to assume this is where your page-specific content
+    should go.
+  #}
+{% endblock %}
+
+{% block afterMain %}
+  {#
+    This would be a great place to put a global footer.
+  #}
+{% endblock %}

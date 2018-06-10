@@ -1,0 +1,14 @@
+{#
+  This is an example home page template. It inherits and extends a layout template
+  that lives in the top-level views/ folder for convenience
+#}
+
+{% extends "layout.html" %}
+
+{% import "macros/utils.html" as utils with context %}
+
+{% block main %}
+  <main>
+    {{ utils.columns() }}
+  </main>
+{% endblock %}
