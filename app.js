@@ -20,13 +20,19 @@ var apos = require('apostrophe')({
     // If a template is not found somewhere else, serve it from the top-level
     // `views/` folder of the project
 
-    'apostrophe-templates': { 
+    'apostrophe-templates': {
       viewsFolderFallback: path.join(__dirname, 'views') 
+      // See also lib/modules/apostrophe-templates/index.js
     },
-   
+  
+    // see lib/modules/one-column-widgets/index.js, et cetera 
+    // Use index.js files for each module to keep app.js readable
+
     'one-column-widgets': {},
     'two-column-widgets': {},
-    'three-column-widgets': {}
+    'three-column-widgets': {},
+    'products': {},
+    'products-pages': {}
 
   }
 });

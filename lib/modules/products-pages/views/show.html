@@ -4,6 +4,7 @@
 
 {% block main %}
   <main>
-    {{ utils.columns() }}
+    <h2>{{ data.piece.title }}</h2>
+    <h3>Price: {{ data.piece.price | cash }}</h3>
   </main>
 {% endblock %}

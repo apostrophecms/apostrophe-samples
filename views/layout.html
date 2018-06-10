@@ -25,7 +25,6 @@
     <ul class="tabs">
       {% for tab in data.home._children %}
         <li class="tab {{ 'active' if tab.slug == data.page.slug }}">
-          {{ apos.log(tab.thumbnail) }}
           {% set image = apos.images.first(tab.thumbnail) %}
           {% if image %}
             <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}" />
