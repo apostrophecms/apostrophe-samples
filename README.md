@@ -22,4 +22,7 @@ Techniques covered include (this list is rapidly growing):
 * Displaying images fetched from related pages (thumbnail images for the "tabs" of the website)
 * One, two, and three-column nested areas, allowing a user-created layout
 
+This is a tiny fraction of what Apostrophe can do, these are just topics
+that developers have found confusing in the past.
+
 For more documentation about Apostrophe and complete documentation, visit the [A2 documentation site](http://apostrophecms.com).
