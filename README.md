@@ -10,9 +10,10 @@ To try it out, follow the usual steps:
 ```
 npm install
 node app apostrophe-users:add admin admin
+node app
 ```
 
-Then log in at `http://localhost:3000/login` to add content.
+After that the site is up and running. So log in at `http://localhost:3000/login` to add content.
 
 Or, just refer to the code. 
 
