@@ -32,7 +32,8 @@ var apos = require('apostrophe')({
     'two-column-widgets': {},
     'three-column-widgets': {},
     'products': {},
-    'products-pages': {}
+    'products-pages': {},
+    'theme': {}
 
   }
 });
