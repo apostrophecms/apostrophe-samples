@@ -35,6 +35,7 @@ var apos = require('apostrophe')({
     'products-pages': {},
     // People who specialize in various products
     'specialists': {},
-    'specialists-pages': {}
+    'specialists-pages': {},
+    'theme': {}
   }
 });
