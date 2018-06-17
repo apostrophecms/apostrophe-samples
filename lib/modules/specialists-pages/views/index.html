@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% import "macros/utils.html" as utils with context %}
+
+{% block main %}
+  <main>
+    <h2>Specialists Available</h2>
+    {% for piece in data.pieces %}
+      <h3><a href="{{ piece._url }}">{{ piece.title }}</a></h3>
+    {% endfor %}
+    {% import 'apostrophe-pager:macros.html' as pager with context %}
+    {{ pager.render({ page: data.currentPage, total: data.totalPages }, data.url) }}
+  </main>
+{% endblock %}

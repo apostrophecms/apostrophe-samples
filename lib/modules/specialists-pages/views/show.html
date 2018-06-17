@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% import "macros/utils.html" as utils with context %}
+
+{% block main %}
+  <main>
+    <h2>{{ data.piece.title }}</h2>
+    <h3>Specializing in these products</h3>
+    {% for product in data.piece._products %}
+      <h4><a href="{{ product._url }}">{{ product.title }}</a></h4>
+    {% endfor %}
+  </main>
+{% endblock %}

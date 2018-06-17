@@ -32,7 +32,9 @@ var apos = require('apostrophe')({
     'two-column-widgets': {},
     'three-column-widgets': {},
     'products': {},
-    'products-pages': {}
-
+    'products-pages': {},
+    // People who specialize in various products
+    'specialists': {},
+    'specialists-pages': {}
   }
 });

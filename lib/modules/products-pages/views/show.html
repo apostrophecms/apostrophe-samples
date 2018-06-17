@@ -6,5 +6,9 @@
   <main>
     <h2>{{ data.piece.title }}</h2>
     <h3>Price: {{ data.piece.price | cash }}</h3>
+    <h3>Specialists available to help you:</h3>
+    {% for specialist in data.piece._specialists %}
+      <h4><a href="{{ specialist._url }}">{{ specialist.title }}</a></h4>
+    {% endfor %}
   </main>
 {% endblock %}
