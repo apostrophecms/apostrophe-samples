@@ -9,6 +9,12 @@
 
 {% block main %}
   <main>
-    {{ utils.columns() }}
+    {{ apos.area(data.page, 'body', {
+      blockLevelControls: true,
+      widgets: {
+        'columns': {},
+        'apostrophe-images': {}
+      }
+    }) }}
   </main>
 {% endblock %}

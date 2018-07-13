@@ -1,0 +1,12 @@
+<style>
+  .columns .apos-area-widgets {
+    display: flex;
+  }
+</style>
+<div class="columns" style="display:flex;">
+  {{ apos.area(data.widget, 'columns', {
+    widgets: {
+      'column': {}
+    }
+  }) }}
+</div>
