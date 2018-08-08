@@ -13,7 +13,8 @@
   "author": "P'unk Avenue",
   "license": "MIT",
   "dependencies": {
-    "apostrophe": "^2.47.0"
+    "apostrophe": "^2.47.0",
+    "bluebird": "^3.5.1"
   },
   "nodemonConfig": {
     "verbose": true,
