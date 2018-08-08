@@ -21,6 +21,15 @@ Techniques covered include (this list is rapidly growing):
 
 * Displaying images fetched from related pages (thumbnail images for the "tabs" of the website)
 * One, two, and three-column nested areas, allowing a user-created layout
+* Command line tasks
+* Example of pieces-pages
+* Working directly with MongoDB
+* Apostrophe's migration convenience APIs
+* Example of a parked page
+* Example of super pattern for the generate method
+* Delivering assets from your own project-level module
+* Joins, reverse joins
+* Randomly populating joins when pieces are inserted
 
 This is a tiny fraction of what Apostrophe can do, these are just topics
 that developers have found confusing in the past.
